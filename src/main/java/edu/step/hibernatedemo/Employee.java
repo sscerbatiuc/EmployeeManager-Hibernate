@@ -15,17 +15,17 @@ public class Employee implements Serializable {
     /**
      * Default serial version Id.
      */
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 123L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true, nullable = false)
     private Integer id;
-    @Column(name = "name", unique = true, nullable = false, length = 100)
+    @Column(name = "name", unique = false, nullable = false, length = 100)
     private String name;
-    @Column(name = "address", unique = true, nullable = false, length = 100)
+    @Column(name = "address", unique = false, nullable = false, length = 100)
     private String address;
-    @Column(name = "phoneno", unique = true, nullable = false, length = 100)
+    @Column(name = "phoneno", unique = false, nullable = false, length = 100)
     private String phoneno;
 
     public Employee() {
